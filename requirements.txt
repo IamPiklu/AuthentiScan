@@ -1,0 +1,7 @@
+argparse
+torch
+torchvision
+facenet-pytorch
+Pillow
+opencv-python
+pytorch-grad-cam
