@@ -1,5 +1,5 @@
 const { spawn } = require("child_process");
-const python = spawn("python", ["app.py", "C:/Users/sayan/OneDrive/Pictures/Screenshots/fake_rashmika.png"]);
+const python = spawn("python", ["app.py", "examples/lynaeydofd.mp4"]);
 
 python.stdout.on("data", (data) => {
   const predictions = JSON.parse(data);
