@@ -1,2 +1,2 @@
 # FAVRA
-##Deep-Fake image Vs Real image
+## Deep-Fake image Vs Real image
