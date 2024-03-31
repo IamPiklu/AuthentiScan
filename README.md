@@ -39,6 +39,9 @@ Authentiscan addresses the problem of deepfake detection by providing a **user-f
 1. Upload image or video .
 2. Within seconds, Authentiscan will analyze the uploaded media and provide real-time results, confirming its authenticity or detecting any manipulation.
 
+## Sample Output
+![gg](examples/fake_dot_csv.jpeg)
+
 ## Contributing
 
 We welcome contributions to Authentiscan! If you'd like to contribute, please follow these guidelines:
