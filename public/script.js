@@ -81,11 +81,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
         pElement.textContent = `${
           key.charAt(0).toUpperCase() + key.slice(1)
         }: ${value.toFixed(2)}%`;
-        pElement.style.fontSize = "1.5em";
-        pElement.style.color = key === "real" ? "green" : "red";
-        pElement.style.margin = "10px 0";
-        pElement.style.padding = "10px";
-        pElement.style.backgroundColor = "#333";
+        pElement.style.fontSize = "2em";
+        pElement.style.color = key === "real" ? "#53b453" : "#fc3434fc";
+        pElement.style.margin = "10px 0 0 0";
+        pElement.style.padding = "2px";
+        pElement.style.fontWeight = "bold";
+        // pElement.style.backgroundColor = "#f4f4f4";
         pElement.style.borderRadius = "5px";
         divElement.appendChild(pElement);
       });

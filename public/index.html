@@ -4,41 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Verification</title>
+    <title>Authenti Scan</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
 </head>
 
-<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
-    <div class=" p-8 flex flex-col justify-center items-center" id="container">
-        <h1 class="text-4xl font-bold mb-4 text-center">Check if Image is Real or Fake</h1>
-        <div id="formContainer" class="flex flex-col justify-center items-center">
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <div id="uploadButton" class="relative mb-8 cursor-pointer justify-center items-center m-3 p-4">
-                    <input type="file" id="imageInput" name="image"
-                        class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" accept="image/*,video/*">
-                    <label for="imageInput"
-                        class="w-full p-4 bg-gray-800 text-white border border-gray-600 rounded cursor-pointer hover:bg-gray-700 transition duration-300 text-center">
-                        Upload Image
-                    </label>
-                </div>
-                <img id="imagePreview" alt="Image Preview" style="max-width: 100%; display: none;">
-                <video id="videoPreview" controls
-                    style="max-width: 100%; display: none; background-color: #000;"></video>
-                <input type="submit" value="Submit"
-                    class="w-full p-4 bg-blue-600 text-white border border-blue-500 rounded cursor-pointer hover:bg-blue-500 transition duration-300 text-center">
-                <div id="loading" class="fixed top-0 left-0 w-full h-full flex items-center justify-center"
-                    style="background: rgba(0, 0, 0, 0.5); display: none;">
-                    <div class="loader"></div>
-                </div>
-                <div id="errorMessage" style="display: none;">
-                    <p>An error occurred while processing your request. Please try again.</p>
-                </div>
+<body class="bg-rose-400">
+    <header>AuthentiScan</header>
 
-            </form>
+    <div class=" text-black flex flex-col items-center justify-center h-screen p-4" class="gg">
+        <div class=" p-8 flex flex-col justify-center items-center h-3/4 w-full m-3 " id="container">
+            <h1 class="text-4xl font-bold mb-4 text-center" id="head">Check if Image is Real or Fake</h1>
+            <div id="formContainer"
+                class="flex flex-col justify-center items-center border-2 border-white rounded-lg border-dashed outline outline-offset-2 outline-2">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <div id="uploadButton" class="relative mb-8 cursor-pointer justify-center items-center m-3 p-4">
+                        <input type="file" id="imageInput" name="image"
+                            class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" accept="image/*,video/*">
+                        <label for="imageInput"
+                            class="w-full p-4 text-gray-600 border border-gray-600 rounded border-dashed cursor-pointer hover:bg-gray-700 transition duration-300 text-center ff">
+                            Upload Image
+                        </label>
+                    </div>
+                    <img id="imagePreview" alt="Image Preview" style="max-width: 100%; display: none;">
+                    <video id="videoPreview" controls
+                        style="max-width: 100%; display: none; background-color: #000;"></video>
+                    <input type="submit" value="Submit"
+                        class="w-full p-4 bg-blue-600 text-white border border-blue-500 rounded cursor-pointer hover:bg-blue-500 transition duration-300 text-center ff">
+                    <div id="loading" class="fixed top-0 left-0 w-full h-full flex items-center justify-center"
+                        style="background: rgba(0, 0, 0, 0.5); display: none;">
+                        <div class="loader"></div>
+                    </div>
+                    <div id="errorMessage" style="display: none;">
+                        <p>An error occurred while processing your request. Please try again.</p>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <div class="mt-2 mb-4 mx-3 bg-black text-white p-6 rounded-xl">
+        <div class="flex flex-row justify-center items-center">
+            <h1 class="text-3xl font-bold mb-2 ">Are you the victim?</h1>
+            <img src="skull_icon.png" alt="Alart" class=" w-12 h-12 mb-2">
+        </div>
+        <h2 class="text-2xl mb-4 font-semibold">Follow the Steps:</h2>
+        <ol class="list-decimal list-inside text-lg">
+            <li class="mb-2">File a Complaint: Approach the Cyber Crime Cell of your local police station and file a
+                First Information Report (FIR). You can also report the content on the National Cybercrime Reporting
+                Portal online. <a
+                    href="https://www.thehindu.com/sci-tech/technology/what-can-you-do-if-someone-makes-deepfakes-of-you/article67894942.ece" target="_blank">Learn
+                    More</a></li>
+            <li class="mb-2">Inform Social Media Platforms: If the deepfake content is circulating on social media
+                platforms like Instagram and Facebook, inform them. The Indian government has instructed these platforms
+                to remove deepfake videos within 24 hours of receiving a complaint. <a href="
+                https://timesofindia.indiatimes.com/india/deep-fake-controversy-government-instructs-social-media-cos-to-take-them-down-within-24-hours-of-complaint/articleshow/105046506.cms" target="_blank">Learn
+                    More</a></li>
+            <li class="mb-2">Legal Provisions: You can lodge a complaint against those circulating the images through
+                certain provisions of the Information Technology Act, 2000. For instance, Section 66 D of the IT Act
+                deals with punishment for cheating by personation by using computer resource. If a deepfake video
+                violates an individual's privacy by using their likeness without consent, victim can potentially file
+                complaint under this law. <a
+                    href="https://www.thehindu.com/sci-tech/technology/what-can-you-do-if-someone-makes-deepfakes-of-you/article67894942.ece" target="_blank">Learn
+                    More</a></li>
+            <li class="mb-2">Defamation: The Indian Penal Code (IPC) contains provisions for defamation (Sections 499
+                and 500). To establish defamation in context of deepfake videos following elements generally need be
+                proven: Falsity: The video must contain false information or portray subject in false light Publication:
+                The video must be shown third party or made public some way. <a
+                    href="https://www.thehindu.com/sci-tech/technology/what-can-you-do-if-someone-makes-deepfakes-of-you/article67894942.ece" target="_blank">Learn
+                    More</a></li>
+            <li class="mb-2">Right Forgotten While there no specific law India known as "right forgotten," individuals
+                approach courts law request removal their personal information including deepfake videos from internet.
+                <a
+                    href="https://www.indiatoday.in/law/story/deepfake-videos-images-storming-internet-what-laws-can-come-to-your-rescue-2459655-2023-11-07" target="_blank">Learn
+                    More</a>
+            </li>
+        </ol>
+    </div>
+
+
 </body>
+
 
 </html>

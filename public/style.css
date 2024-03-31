@@ -1,7 +1,102 @@
-/* Additional custom styles */
-body {
-  font-family: Arial, sans-serif;
+/* Custom Font */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('space\ age.ttf') format('truetype');
+
 }
+
+/* styling by tag */
+body{
+  font-family: Arial, sans-serif;
+  background-color: rgb(221 214 254);
+}
+header {
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  background:black;
+  box-shadow: #ccc 0px 0px 5px 0px;
+  border: 2px solid black;
+  /* border-bottom: black; */
+  align-items: center;
+  color: aliceblue;
+  /* background-color: seagreen; */
+  margin: auto;
+  font-family:'MyCustomFont', sans-serif;
+
+  justify-content: center;
+  padding: 30px;
+  /* box-sizing: border-box; */
+  cursor: pointer;
+  font-size: 2rem;
+  /* border-radius: 10px; */
+}
+
+
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+h1{
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  text-shadow: 4px 2px 4px rgba(97, 84, 84, 0.5);
+}
+
+
+li,h2{
+  font-family: "Roboto Mono", monospace;
+  
+  text-shadow: 4px 2px 4px rgba(97, 84, 84, 0.5);
+}
+p {
+  font-size: 1.2em;
+  color: #aa7f7f;
+}
+
+/* styling by id */
+#imagePreview {
+  display: none;
+  margin-bottom: 10px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#videoPreview {
+  display: none;
+  margin-bottom: 10px;
+  background-color: #000;
+}
+#head{
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: none;
+}
+
+#container {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#formContainer {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+  /* background-color: #1a202c; */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+/* styling by class */
+.ff{
+  font-family: "Roboto Mono", monospace;;
+}
+
+/* loading animation */
 .loader {
   --r1: 154%;
   --r2: 68.5%;
@@ -22,37 +117,4 @@ body {
     33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
     66%  {background-position: -100%  66%,0%   66% ,100% 66% }
     100% {background-position:    0% 100%,100% 100%,200% 100%}
-}
-
-#container {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
-}
-
-#formContainer {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 1rem;
-  background-color: #1a202c;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-p {
-  font-size: 1.2em;
-  color: #aa7f7f;
-}
-
-#imagePreview {
-  display: none;
-  margin-bottom: 10px;
-}
-
-#videoPreview {
-  display: none;
-  margin-bottom: 10px;
-  background-color: #000;
 }
