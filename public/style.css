@@ -1,0 +1,58 @@
+/* Additional custom styles */
+body {
+  font-family: Arial, sans-serif;
+}
+.loader {
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%,0% 0%,100% 0%;
+  background-repeat:no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+    100% {background-position:    0% 100%,100% 100%,200% 100%}
+}
+
+#container {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#formContainer {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+  background-color: #1a202c;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #aa7f7f;
+}
+
+#imagePreview {
+  display: none;
+  margin-bottom: 10px;
+}
+
+#videoPreview {
+  display: none;
+  margin-bottom: 10px;
+  background-color: #000;
+}
