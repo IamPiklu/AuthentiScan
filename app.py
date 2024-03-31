@@ -109,7 +109,7 @@ def process_video(video_path):
 
         # Increment the frame counter
         frame_counter += 1
-    cv2.imwrite(f"face_with_mask.jpg", face_with_mask)
+    cv2.imwrite("output/face_with_mask.jpg", face_with_mask)
     # Release the video file
     video.release()
 
