@@ -43,7 +43,10 @@ Authentiscan addresses the problem of deepfake detection by providing a **user-f
 ![input image](input.png)
 
 ## Sample Output:
-![input image](out.png)
+![output image](out.png)
+
+## Information about Complain:
+![information image](infoAboutComplain.png)
 
 ## Contributing:
 
