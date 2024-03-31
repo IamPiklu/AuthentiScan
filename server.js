@@ -51,7 +51,7 @@ app.post("/upload", upload.single("image"), (req, res) => {
   });
 
   python.stderr.on("data", (data) => {
-    // console.error(`stderr: ${data}`);
+    console.error(`stderr: ${data}`);
   });
 
   python.on("close", (code) => {

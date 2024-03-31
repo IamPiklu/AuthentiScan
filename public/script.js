@@ -29,6 +29,16 @@ document.querySelector("#imageInput").addEventListener("change", function () {
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // Get the submit button, loading animation, and error message elements
+  const submitButton = document.querySelector('input[type="submit"]');
+  const loadingAnimation = document.getElementById("loading");
+  const errorMessage = document.getElementById("errorMessage");
+
+  // Hide the submit button and error message, and show the loading animation
+  submitButton.style.display = "none";
+  errorMessage.style.display = "none";
+  loadingAnimation.style.display = "flex";
+
   // Disable the form to prevent multiple submissions
   const form = document.querySelector("form");
   form.classList.add("opacity-50");
@@ -45,6 +55,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
   })
     .then((response) => response.json())
     .then((predictions) => {
+      // Hide the loading animation
+      loadingAnimation.style.display = "none";
+
       // Get the div element by id
       const divElement = document.querySelector("#container");
 
@@ -55,7 +68,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
       // divElement.appendChild(imageElement);
 
       // Hide the submit button
-      document.querySelector('input[type="submit"]').style.display = "none";
+      // document.querySelector('input[type="submit"]').style.display = "none";
 
       // Sort the results
       const sortedPredictions = Object.entries(predictions).sort(
@@ -78,7 +91,13 @@ document.querySelector("form").addEventListener("submit", (event) => {
       });
 
       // Hide the image preview
-      document.querySelector("#preview").style.display = "none";
+      // document.querySelector("#preview").style.display = "none";
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+      console.error(error);
+
+      // Hide the loading animation and show the submit button in case of error
+      loadingAnimation.style.display = "none";
+      errorMessage.style.display = "block";
+    });
 });
