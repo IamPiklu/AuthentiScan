@@ -34,6 +34,8 @@ Authentiscan addresses the problem of deepfake detection by providing a **user-f
 4. Start the development server: `node server.js` or `nodemon server.js`
 5. Open the application in your web browser: `http://localhost:3000`
 
+   **Note** - For working of ***pytorch-grad-cam*** Python Version 3.10.11 or less is required.
+
 ## Usage:
 
 1. Upload image or video .
